@@ -1,0 +1,207 @@
+#Simple text input calculator with no created functions or imported modules
+
+user = True
+
+while user == True:
+
+    s = input()
+
+    #Calculating integers
+
+    if "+" in s and "." not in s:
+
+        s_idx = s.index("+")
+
+        slice_list = []#slicing
+
+        slice_list.extend((s[:s_idx], s[s_idx + 1:]))
+
+        x = int(s[:s_idx])
+
+        y = int(s[s_idx + 1:])
+
+        print(x + y)
+
+    elif "-" in s and "." not in s:
+
+        s_idx = s.index("-")
+
+        slice_list = []#slicing
+
+        slice_list.extend((s[:s_idx], s[s_idx + 1:]))
+
+        x = int(s[:s_idx])
+
+        y = int(s[s_idx + 1:])
+
+        print(x - y)
+
+    elif "x" in s and "." not in s:
+
+        s_idx = s.index("x")
+
+        slice_list = []#slicing
+
+        slice_list.extend((s[:s_idx], s[s_idx + 1:]))
+
+        x = int(s[:s_idx])
+
+        y = int(s[s_idx + 1:])
+
+        print(x * y)
+
+    elif "/" in s and "." not in s:
+
+        s_idx = s.index("/")
+
+        slice_list = []#slicing
+
+        slice_list.extend((s[:s_idx], s[s_idx + 1:]))
+
+        x = int(s[:s_idx])
+
+        y = int(s[s_idx + 1:])
+
+        if x / y == x // y:
+
+            print(x // y)
+
+        else:
+
+            print(x / y)
+
+    elif "." in s:#Calculating Floats
+
+        if "+" in s:
+
+            s_idx = s.index("+")
+
+            slice_list = []#More Slicing
+
+            slice_list.extend((s[:s_idx], s[s_idx + 1:]))
+
+            x = float(s[:s_idx])
+
+            y = float(s[s_idx + 1:])
+
+            print(x + y)
+
+        elif "-" in s:
+
+            s_idx = s.index("-")
+
+            slice_list = []#more intense slicing
+
+            slice_list.extend((s[:s_idx], s[s_idx + 1:]))
+
+            x = float(s[:s_idx])
+
+            y = float(s[s_idx + 1:])
+
+            print(x - y)
+
+        elif "x" in s:
+
+            s_idx = s.index("x")
+
+            slice_list = []#slicing continues
+
+            slice_list.extend((s[:s_idx], s[s_idx + 1:]))
+
+            x = float(s[:s_idx])
+
+            y = float(s[s_idx + 1:])
+
+            print(x * y)
+
+        elif "/" in s:
+
+            s_idx = s.index("/")
+
+            slice_list = []#slicing ends
+
+            slice_list.extend((s[:s_idx], s[s_idx + 1:]))
+
+            x = float(s[:s_idx])
+
+            y = float(s[s_idx + 1:])
+
+            a = x / y
+
+            b = x // y
+
+            if a == b:
+
+                print(b)
+
+            else:
+
+                print(a)
+
+    elif "." and "." in  s:
+
+        if "+" in s:
+
+            s_idx = s.index("+")
+
+            slice_list = []
+
+            slice_list.extend((s[:s_idx], s[s_idx + 1:]))
+
+            x = float(s[:s_idx])
+
+            y = float(s[s_idx + 1:])
+
+            print(x + y)
+
+        elif "-" in s:
+
+            s_idx = s.index("-")
+
+            slice_list = []
+
+            slice_list.extend((s[:s_idx], s[s_idx + 1:]))
+
+            x = float(s[:s_idx])
+
+            y = float(s[s_idx + 1:])
+
+            print(x - y)
+
+        elif "x" in s:
+
+            s_idx = s.index("x")
+
+            slice_list = []
+
+            slice_list.extend((s[:s_idx], s[s_idx + 1:]))
+
+            x = float(s[:s_idx])
+
+            y = float(s[s_idx + 1:])
+
+            print(x * y)
+
+        elif "/" in s:
+
+            s_idx = s.index("/")
+
+            slice_list = []
+
+            slice_list.extend((s[:s_idx], s[s_idx + 1:]))
+
+            x = float(s[:s_idx])
+
+            y = float(s[s_idx + 1:])
+
+            a = x / y
+
+            b = x // y
+
+            if a == b:
+
+                print(b)
+
+            else:
+
+                print(a)
